@@ -1,6 +1,8 @@
 let pointsCount;
 let iterationCount;
 let multiplier;
+let animationId;
+let isAnimating = false;
 const maxPoints = 1500000;
 const scaleFactor = 2 / 3;
 
@@ -21,6 +23,47 @@ function putPoint(ctx, x, y, color) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, 1, 1);
 }
+
+function toggleAnimation() {
+  const animateButton = document.getElementById('animateButton');
+  const buttonText = animateButton.innerText;
+
+  if (buttonText === 'Animate it') {
+    startAnimation();
+  } else {
+    stopAnimation();
+  }
+}
+
+function startAnimation() {
+  const animateButton = document.getElementById('animateButton');
+  animateButton.innerText = 'Stop';
+  animateButton.style.backgroundColor = '#FF1D27';
+
+  isAnimating = true;
+  animate();
+}
+
+function stopAnimation() {
+  const animateButton = document.getElementById('animateButton');
+  animateButton.innerText = 'Animate it';
+  animateButton.style.backgroundColor = '#007AFF';
+
+  isAnimating = false;
+  cancelAnimationFrame(animationId);
+}
+
+function animate() {
+  if (pointsCount < maxPoints && isAnimating) {
+    serpinsky(iterationCount);
+    iterationCount *= multiplier;
+    animationId = requestAnimationFrame(animate);
+  } else {
+    stopAnimation();
+    console.log('animation stopped');
+  }
+}
+
 
 function animation() {
   if (pointsCount < maxPoints) {
