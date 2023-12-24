@@ -59,8 +59,7 @@ function putPoint(ctx, x, y, color) {
 function animation() {
     if (pointsCount < maxPoints) {
         serpinsky(iterationCount);
-        iterationCount*=multiplier;
-        pointsCount+=iterationCount;
+        iterationCount*=multiplier;        
         requestAnimationFrame(animation);
     } else {
         console.log("stopped");
@@ -95,6 +94,8 @@ function serpinsky(iterationCount) {
         const canvasY = Math.round(newPoint.y * canvas.height);
         putPoint(ctx, canvasX, canvasY, targetPoint.color);
     }
+
+    pointsCount+=iterationCount;
 }
 
 function serpinskyRecursive(){
