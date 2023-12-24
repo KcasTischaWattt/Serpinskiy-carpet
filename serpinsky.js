@@ -1,8 +1,11 @@
+let iterationCount = 0;
+let multiplier = 0;
+const maxIterations = 10000;
+
 function restart() {
     const canvas = document.querySelector('#canvas');
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    serpinsky()
 }
 
 function putPoint(ctx, x, y, color) {
@@ -16,6 +19,15 @@ function getRandomPoint() {
         y: Math.random(),
     };
 }
+
+function animation() {
+    if (iterationCount < maxIterations) {
+        serpinsky();
+        iterationCount++;
+        requestAnimationFrame(animation);
+    }
+}
+
 
 function serpinsky() {
     const canvas = document.querySelector('#canvas');
@@ -37,7 +49,7 @@ function serpinsky() {
     let newPoint = getRandomPoint();
     const scaleFactor = 2 / 3;
 
-    for (let i = 0; i < 50000; i++) {
+    for (let i = 0; i < 100; i++) {
         const targetPoint = refPoints[Math.floor(Math.random() * 8)];
         newPoint.x += (targetPoint.x - newPoint.x) * scaleFactor;
         newPoint.y += (targetPoint.y - newPoint.y) * scaleFactor;
