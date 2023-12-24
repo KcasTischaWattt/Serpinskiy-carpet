@@ -11,6 +11,14 @@ class Point{
     }
 }
 
+class ColorPoint{
+    constructor(x,y,color){
+        this.x = x;
+        this.y = y;
+        this.color = color;
+    }
+}
+
 class Rectangle{
     constructor(leftTop, rightBottom){
         this.leftTop = leftTop;
@@ -48,13 +56,6 @@ function putPoint(ctx, x, y, color) {
     ctx.fillRect(x, y, 1, 1);
 }
 
-function getRandomPoint() {
-    return {
-        x: Math.random(),
-        y: Math.random(),
-    };
-}
-
 function animation() {
     if (pointsCount < maxPoints) {
         serpinsky(iterationCount);
@@ -73,17 +74,17 @@ function serpinsky(iterationCount) {
     }
     const ctx = canvas.getContext('2d');
     const refPoints = [
-        { x: 0, y: 0, color: "#FF1D27" },
-        { x: 0.5, y: 0, color: "#3D9AFC" },
-        { x: 1, y: 0, color: "#F1F2F2" },
-        { x: 1, y: 0.5, color: "pink" },
-        { x: 1, y: 1, color: "#1EE3CF" },
-        { x: 0.5, y: 1, color: "#01DC25" },
-        { x: 0, y: 1, color: "#AE583D" },
-        { x: 0, y: 0.5, color: "#6B48FF" }
+        new ColorPoint(0, 0, "#FF1D27"),
+        new ColorPoint(0.5, 0, "#3D9AFC"),
+        new ColorPoint(1, 0, "#F1F2F2"),
+        new ColorPoint(1, 0.5, "pink"),
+        new ColorPoint(1, 1, "#1EE3CF"),
+        new ColorPoint(0.5, 1, "#01DC25"),
+        new ColorPoint(0, 1, "#AE583D"),
+        new ColorPoint(0, 0.5, "#6B48FF")
     ];
 
-    let newPoint = getRandomPoint();
+    let newPoint = new ColorPoint(Math.random(), Math.random(), "white");
 
     for (let i = 0; i < iterationCount; i++) {
         const targetPoint = refPoints[Math.floor(Math.random() * 8)];
