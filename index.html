@@ -1,16 +1,36 @@
-<html>
-    <head>
-        <script src="serpinsky.js"></script>
-    </head>
-    <body>
-        <canvas id="canvas" height="750" width="750">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="serpinsky.js"></script>
+    <title>Sierpinski</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-        </canvas>
-        <script>
-            serpinsky();
-        </script>
-        <div>
+        canvas {
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" height="750" width="750"></canvas>
+    <script>
+        serpinsky();
+    </script>
+    <div>
         <button onClick="serpinsky()">More Points!</button>
-        </div>
-    </body>
+    </div>
+</body>
 </html>
