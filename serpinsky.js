@@ -5,7 +5,6 @@ function restart() {
     serpinsky()
 }
 
-
 function putPoint(ctx, x, y, color) {
     ctx.fillStyle = color;
     ctx.fillRect(x, y, 1, 1);
@@ -25,20 +24,20 @@ function serpinsky() {
     }
     const ctx = canvas.getContext('2d');
     const refPoints = [
-        { x: 0, y: 0, color: "red" },
-        { x: 0.5, y: 0, color: "blue" },
-        { x: 1, y: 0, color: "grey" },
+        { x: 0, y: 0, color: "#FF1D27" },
+        { x: 0.5, y: 0, color: "#3D9AFC" },
+        { x: 1, y: 0, color: "#F1F2F2" },
         { x: 1, y: 0.5, color: "pink" },
-        { x: 1, y: 1, color: "cyan" },
-        { x: 0.5, y: 1, color: "green" },
-        { x: 0, y: 1, color: "orange" },
-        { x: 0, y: 0.5, color: "black" }
+        { x: 1, y: 1, color: "#1EE3CF" },
+        { x: 0.5, y: 1, color: "#01DC25" },
+        { x: 0, y: 1, color: "#AE583D" },
+        { x: 0, y: 0.5, color: "#6B48FF" }
     ];
 
     let newPoint = getRandomPoint();
     const scaleFactor = 2 / 3;
 
-    for (let i = 0; i < 100000; i++) {
+    for (let i = 0; i < 50000; i++) {
         const targetPoint = refPoints[Math.floor(Math.random() * 8)];
         newPoint.x += (targetPoint.x - newPoint.x) * scaleFactor;
         newPoint.y += (targetPoint.y - newPoint.y) * scaleFactor;
