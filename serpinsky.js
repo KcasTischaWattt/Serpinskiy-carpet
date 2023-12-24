@@ -1,3 +1,11 @@
+function restart() {
+    const canvas = document.querySelector('#canvas');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    serpinsky()
+}
+
+
 function putPoint(ctx, x, y, color) {
     ctx.fillStyle = color;
     ctx.fillRect(x, y, 1, 1);
