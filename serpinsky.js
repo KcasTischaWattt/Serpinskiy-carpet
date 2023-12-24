@@ -105,7 +105,7 @@ function serpinskyRecursive(){
         return;
     }
     const ctx = canvas.getContext('2d');
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = "#4D4D4D";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     function deleteCentralRect(inRect){
         const centralLeftTop = new Point(inRect.leftTop.x + inRect.width()/3,
