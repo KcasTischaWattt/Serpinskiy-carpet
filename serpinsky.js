@@ -64,17 +64,6 @@ function animate() {
   }
 }
 
-
-function animation() {
-  if (pointsCount < maxPoints) {
-    serpinsky(iterationCount);
-    iterationCount *= multiplier;
-    requestAnimationFrame(animation);
-  } else {
-    console.log('stopped');
-  }
-}
-
 function serpinsky(iterationCount) {
   const canvas = document.querySelector('#canvas');
   if (!canvas.getContext) {
