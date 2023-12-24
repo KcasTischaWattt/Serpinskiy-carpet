@@ -2,6 +2,7 @@ let pointsCount;
 let iterationCount;
 let multiplier;
 const maxPoints = 1500000;
+const scaleFactor = 2 / 3;
 
 function setValuesToDefault() {
     pointsCount = 0;
@@ -58,7 +59,6 @@ function serpinsky(iterationCount) {
     ];
 
     let newPoint = getRandomPoint();
-    const scaleFactor = 2 / 3;
 
     for (let i = 0; i < iterationCount; i++) {
         const targetPoint = refPoints[Math.floor(Math.random() * 8)];
