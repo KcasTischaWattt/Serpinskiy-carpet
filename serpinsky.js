@@ -29,6 +29,9 @@ function toggleAnimation() {
   const buttonText = animateButton.innerText;
 
   if (buttonText === 'Animate it') {
+    if (pointsCount >= maxPoints - iterationCount) {
+        restart()
+    }
     startAnimation();
   } else {
     stopAnimation();
