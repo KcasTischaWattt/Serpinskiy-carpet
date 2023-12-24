@@ -1,7 +1,7 @@
 let pointsCount;
 let iterationCount;
 let multiplier;
-const maxPoints = 2000000;
+const maxPoints = 1500000;
 
 function setValuesToDefault() {
     pointsCount = 0;
