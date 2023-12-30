@@ -34,7 +34,7 @@ function serpinsky(iterationCount) {
     new ColorPoint(0, 0.5, '#6B48FF'),
   ];
 
-  let newPoint = new ColorPoint(Math.random(), Math.random(), 'white');
+  let newPoint = new ColorPoint(0, 0, 'white');
 
   for (let i = 0; i < iterationCount; i++) {
     const targetPoint = refPoints[Math.floor(Math.random() * 8)];
