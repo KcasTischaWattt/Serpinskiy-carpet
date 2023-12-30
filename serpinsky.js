@@ -41,8 +41,8 @@ function serpinsky(iterationCount) {
     newPoint.x += (targetPoint.x - newPoint.x) * scaleFactor;
     newPoint.y += (targetPoint.y - newPoint.y) * scaleFactor;
 
-    const canvasX = Math.round(newPoint.x * canvas.width);
-    const canvasY = Math.round(newPoint.y * canvas.height);
+    const canvasX = Math.floor(newPoint.x * canvas.width);
+    const canvasY = Math.floor(newPoint.y * canvas.height);
     putPoint(ctx, canvasX, canvasY, targetPoint.color);
   }
 
