@@ -5,6 +5,7 @@ function restart() {
     setValuesToDefault();
   }
 
+  
 function toggleAnimation() {
     const animateButton = document.getElementById('animateButton');
     const buttonText = animateButton.innerText;
