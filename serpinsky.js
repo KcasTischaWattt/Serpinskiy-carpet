@@ -10,6 +10,7 @@ function setValuesToDefault() {
   pointsCount = 0;
   multiplier = 1.01;
   iterationCount = 100;
+  console.log('Points count: ', 0);
 }
 
 function putPoint(ctx, x, y, color) {
