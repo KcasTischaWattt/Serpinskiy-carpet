@@ -47,4 +47,5 @@ function serpinsky(iterationCount) {
   }
 
   pointsCount += iterationCount;
+  console.log('Points count: ', pointsCount);
 }

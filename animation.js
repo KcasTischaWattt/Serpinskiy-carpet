@@ -5,7 +5,7 @@ function restart() {
     setValuesToDefault();
   }
 
-  
+
 function toggleAnimation() {
     const animateButton = document.getElementById('animateButton');
     const buttonText = animateButton.innerText;
@@ -45,6 +45,5 @@ function toggleAnimation() {
       animationId = requestAnimationFrame(animate);
     } else {
       stopAnimation();
-      console.log('animation stopped');
     }
   }
