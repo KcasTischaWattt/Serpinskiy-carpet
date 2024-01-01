@@ -41,13 +41,13 @@ button {
     font-family: 'Montserrat', sans-serif;
 }
 
-button.restart {
-    background:#6B48FF;
-    color: #E3E3E5;
-}
-    
 button:hover {
     background-color: #104B8D;
+}
+
+button.restart {
+    background: #6B48FF;
+    color: #E3E3E5;
 }
 
 button.restart:hover {
