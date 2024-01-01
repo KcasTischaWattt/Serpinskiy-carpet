@@ -12,10 +12,13 @@
         <button onClick="serpinsky(20000)">More Points!</button>
         <button onClick="serpinskyRecursive()">Draw recursive</button>
         <button onClick="toggleAnimation()" id="animateButton">Animate it</button>
-        <label for="speedRange" style="color: #E3E3E5;">Animation speed:</label>
-        <input type="range" min="1" max="10" value="1" class="slider" id="speedRange" style="color: #007AFF;" onChange="updateSpeed(this.value)">
-        <label for="speedRange" style="color: #E3E3E5;">Target density:</label>
-        <input type="range" min="1" max="7" value="4" class="slider" id="densityRange" style="color: #007AFF;" onChange="updateDensity(this.value)">
+        <button class="accordion">Animation Settings</button>
+        <div class="panel">
+            <label for="speedRange" style="color: #E3E3E5;">Animation speed:</label>
+            <input type="range" min="1" max="10" value="1" class="slider" id="speedRange" style="color: #007AFF;" onChange="updateSpeed(this.value)">
+            <label for="densityRange" style="color: #E3E3E5;">Target density:</label>
+            <input type="range" min="1" max="7" value="4" class="slider" id="densityRange" style="color: #007AFF;" onChange="updateDensity(this.value)">
+        </div>
         <button onClick="restart()" class="restart">Restart</button>
     </div>
     <script src="serpinsky.js"></script>
@@ -25,6 +28,11 @@
     <script src="animation.js"></script>
     <script>
         setValuesToDefault()
+        var accordionBtn = document.querySelector('.accordion');
+        accordionBtn.addEventListener('click', function() {
+            var panel = document.querySelector('.panel');
+            panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+        });
     </script>
 </body>
 </html>
