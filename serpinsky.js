@@ -1,14 +1,13 @@
 let pointsCount;
 let iterationCount;
-let multiplier;
 let animationId;
+let multiplier = 1.01;
 let isAnimating = false;
 const maxPoints = 1500000;
 const scaleFactor = 2 / 3;
 
 function setValuesToDefault() {
   pointsCount = 0;
-  multiplier = 1.01;
   iterationCount = 100;
   console.log('Points count: ', 0);
 }
