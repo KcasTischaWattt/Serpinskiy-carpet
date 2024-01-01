@@ -10,7 +10,7 @@ body {
 
 h1 {
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #E3E3E5;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -42,10 +42,10 @@ button {
 }
 
 button.restart {
-    background: linear-gradient(180deg, #4D4D4D 0%, #6B48FF 0.01%, #615AE5 100%);
+    background:#6B48FF;
     color: #E3E3E5;
 }
-
+    
 button:hover {
     background-color: #104B8D;
 }
