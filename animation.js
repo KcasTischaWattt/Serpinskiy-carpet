@@ -9,6 +9,10 @@ function updateSpeed(value){
   multiplier = 0.991 + 0.01*value
 }
 
+function updateDensity(value){
+  maxPoints = 500000*value
+}
+
 function toggleAnimation() {
     const animateButton = document.getElementById('animateButton');
     const buttonText = animateButton.innerText;

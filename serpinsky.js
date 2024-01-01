@@ -3,7 +3,7 @@ let iterationCount;
 let animationId;
 let multiplier = 1.001;
 let isAnimating = false;
-const maxPoints = 2500000;
+let maxPoints = 2500000;
 const scaleFactor = 2 / 3;
 
 function setValuesToDefault() {
