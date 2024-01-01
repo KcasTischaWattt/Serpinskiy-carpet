@@ -63,18 +63,19 @@ div {
 
 .accordion {
     background-color: #007AFF;
-    font-family: 'Montserrat', sans-serif;
     color: #E3E3E5;
     cursor: pointer;
-    text-align: center;
     padding: 18px;
     width: 100%;
-    text-align: left;
+    text-align: center;
     border: none;
     outline: none;
     font-size: 18px;
     transition: 0.4s;
     margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .accordion:hover {
