@@ -6,7 +6,7 @@ function restart() {
   }
 
 function updateSpeed(value){
-  multiplier = 1 + 0.01*value
+  multiplier = 0.991 + 0.01*value
 }
 
 function toggleAnimation() {
