@@ -28,11 +28,7 @@
     <script src="animation.js"></script>
     <script>
         setValuesToDefault()
-        var accordionBtn = document.querySelector('.accordion');
-        accordionBtn.addEventListener('click', function() {
-            var panel = document.querySelector('.panel');
-            panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
-        });
+        toggleAccordion()
     </script>
 </body>
 </html>
