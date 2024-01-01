@@ -62,7 +62,8 @@ div {
 }
 
 .accordion {
-    background-color: #1C2633;
+    background-color: #007AFF;
+    font-family: 'Montserrat', sans-serif;
     color: #E3E3E5;
     cursor: pointer;
     text-align: center;
@@ -71,12 +72,13 @@ div {
     text-align: left;
     border: none;
     outline: none;
-    font-size: 15px;
+    font-size: 18px;
     transition: 0.4s;
+    margin-bottom: 8px;
 }
 
 .accordion:hover {
-    background-color: #37474F;
+    background-color: #104B8D;
 }
 
 .panel {
@@ -88,4 +90,10 @@ div {
 
 .panel label {
     color: #E3E3E5;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.panel input {
+    margin-bottom: 16px;
 }

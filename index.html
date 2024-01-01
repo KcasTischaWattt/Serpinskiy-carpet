@@ -14,10 +14,10 @@
         <button onClick="toggleAnimation()" id="animateButton">Animate it</button>
         <button class="accordion">Animation Settings</button>
         <div class="panel">
-            <label for="speedRange" style="color: #E3E3E5;">Animation speed:</label>
-            <input type="range" min="1" max="10" value="1" class="slider" id="speedRange" style="color: #007AFF;" onChange="updateSpeed(this.value)">
-            <label for="densityRange" style="color: #E3E3E5;">Target density:</label>
-            <input type="range" min="1" max="7" value="4" class="slider" id="densityRange" style="color: #007AFF;" onChange="updateDensity(this.value)">
+            <label for="speedRange">Animation speed:</label>
+            <input type="range" min="1" max="10" value="1" class="slider" id="speedRange" onChange="updateSpeed(this.value)">        
+            <label for="densityRange">Target density:</label>
+            <input type="range" min="1" max="7" value="4" class="slider" id="densityRange" onChange="updateDensity(this.value)">
         </div>
         <button onClick="restart()" class="restart">Restart</button>
     </div>
