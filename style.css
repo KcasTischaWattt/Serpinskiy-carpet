@@ -98,3 +98,10 @@ div {
 .panel input {
     margin-bottom: 16px;
 }
+
+.slider-container {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
