@@ -19,3 +19,8 @@ function toggleAccordion() {
       panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
   });
 }
+
+function initialize() {
+    setValuesToDefault();
+    toggleAccordion();
+}
