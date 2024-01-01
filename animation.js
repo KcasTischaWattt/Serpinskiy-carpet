@@ -5,6 +5,9 @@ function restart() {
     setValuesToDefault();
   }
 
+function updateSpeed(value){
+  multiplier = 1 + 0.01*value
+}
 
 function toggleAnimation() {
     const animateButton = document.getElementById('animateButton');
