@@ -6,11 +6,13 @@ function restart() {
   }
 
 function updateSpeed(value){
-  multiplier = 0.991 + 0.01*value
+  multiplier = 0.991 + 0.01*value;
+  document.getElementById("speedValue").textContent = value;
 }
 
 function updateDensity(value){
-  maxPoints = 500000*value
+  maxPoints = 500000*value;
+  document.getElementById("densityValue").textContent = value;
 }
 
 function toggleAnimation() {
