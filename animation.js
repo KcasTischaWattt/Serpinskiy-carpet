@@ -12,7 +12,7 @@ function updateSpeed(value){
 
 function updateDensity(value){
   maxPoints = 500000*value;
-  document.getElementById("densityValue").textContent = value;
+  document.getElementById("densityValue").textContent = maxPoints;
 }
 
 function toggleAnimation() {
